@@ -1,0 +1,34 @@
+.navegador {
+  display: flex;
+  padding: 10px;
+  background-color: #231f5e;
+  border-bottom: 1px solid #ccc;
+  color: #ccc;
+  justify-content:space-between;
+  
+}
+
+.navegador h2 {
+  align-content: left;
+  margin: 0;
+  font-size: 22px;
+}
+
+.botones {
+  display: flex;
+  gap: 6px; /* controla el espacio entre botones */
+  margin-left: 1000px;
+  
+}
+
+.botones2 {
+    
+     display: flex;
+  gap: 6px; /* controla el espacio entre botones */
+}
+
+.botones button {
+  padding: 6px 10px;
+  font-size: 14px;
+  margin: 0; /* elimina márgenes por defecto */
+}
