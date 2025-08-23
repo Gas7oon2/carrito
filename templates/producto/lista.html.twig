@@ -1,15 +1,20 @@
-<html>
- <head>
- <meta charset="UTF-8">
- <link href="{{ asset('css/estilos.css') }}" rel="stylesheet" />
- <title>Lista de productos</title>
- </head>
- <body>
-  <div name="navegador" class="navegador">
-        <h2>carrito de compras </h2>
-    <button type="submit" name="verorden" class="botones"> Ver orden</button>
-    <button type="submit" name="salir" class="botones2"> Salir</button>
-  </div>  
- <h2>Esta es la lista de productos</h2>
- </body>
-</html>
+{% extends "base.html.twig" %}
+
+{% block title %}Lista de productos{% endblock %}
+{# Aca Podemos agregar estilos aparte de los que se heredan del padre #}
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block body %}
+<div name="navegador" class="navegador">
+    <h2>carrito de compras</h2>
+    <button type="submit" name="verorden" class="botones">Ver orden</button>
+    <button type="submit" name="salir" class="botones2">Salir</button>
+</div>
+<h2>Esta es la lista de productos</h2>
+{% endblock %}
+{# hay que limitar con block y su nombre en el archivo padre haciendo alucion a alguna etiqueta especifica de 
+html para que las mismas partes que queremos que hereden del padre en otra pagina html tengan la 
+herencia. En la pagina hija hay que poner solamente las etiquetas block con el mismo nombre haciendo alucion 
+al pedazo de bloque que queremos que herede del padre #}
