@@ -14,6 +14,8 @@ class ProductoController extends AbstractController
    return $this->render('producto/lista.html.twig');
  }
 
+
+
 }
 
 ?>

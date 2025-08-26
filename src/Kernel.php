@@ -8,4 +8,9 @@ use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
+     #Este constructor es para que no tire error o advertencia(es vacio) #
+     public function __construct(string $environment, bool $debug)
+    {
+        parent::__construct($environment, $debug);
+    }
 }
