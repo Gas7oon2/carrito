@@ -1,4 +1,4 @@
-.navegador {
+/*.navegador {
   display: flex;
   padding: 10px;
   background-color: #231f5e;
@@ -13,10 +13,11 @@
   margin: 0;
   font-size: 22px;
 }
-
+/*
 .botones {
   display: flex;
   gap: 6px; /* controla el espacio entre botones */
+  /*
   margin-left: 1000px;
   
 }
@@ -25,10 +26,34 @@
     
      display: flex;
   gap: 6px; /* controla el espacio entre botones */
+  /*
 }
 
 .botones button {
   padding: 6px 10px;
   font-size: 14px;
   margin: 0; /* elimina márgenes por defecto */
+  /*
 }
+ */
+
+.navegador {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.producto-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+
