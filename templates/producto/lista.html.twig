@@ -3,14 +3,16 @@
 {% block title %}Lista de productos{% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/productos.css') }}">
+    {{ parent() }} {# Esto carga el estilos.css del bloque padre #}
 {% endblock %}
 
 {% block body %}
 <div class="navegador">
     <h2>Carrito de compras</h2>
-    <button type="button" class="botones">Ver orden</button>
-    <button type="button" class="botones2">Salir</button>
+    <div>
+        <button type="button" class="botones">Ver orden</button>
+        <button type="button" class="botones2">Salir</button>
+    </div>
 </div>
 
 <h2>Esta es la lista de productos</h2>
@@ -27,6 +29,7 @@
     {% endfor %}
 </div>
 {% endblock %}
+
 
 
 {# hay que limitar con block y su nombre en el archivo padre haciendo alucion a alguna etiqueta especifica de 

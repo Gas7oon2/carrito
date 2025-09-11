@@ -1,59 +1,76 @@
-/*.navegador {
-  display: flex;
-  padding: 10px;
-  background-color: #231f5e;
-  border-bottom: 1px solid #ccc;
-  color: #ccc;
-  justify-content:space-between;
-  
+/* NAV superior */
+.navegador {
+    display: flex;
+    justify-content: space-between; /* título a la izquierda, botones a la derecha */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000; /* negro */
+    color: #fff;
 }
 
 .navegador h2 {
-  align-content: left;
-  margin: 0;
-  font-size: 22px;
+    margin: 0;
+    font-size: 22px;
 }
-/*
+
+/* Botones del nav */
+.botones,
+.botones2 {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
 .botones {
-  display: flex;
-  gap: 6px; /* controla el espacio entre botones */
-  /*
-  margin-left: 1000px;
-  
+    background-color: #4caf50; /* verde */
 }
 
 .botones2 {
-    
-     display: flex;
-  gap: 6px; /* controla el espacio entre botones */
-  /*
+    background-color: #f44336; /* rojo */
 }
 
-.botones button {
-  padding: 6px 10px;
-  font-size: 14px;
-  margin: 0; /* elimina márgenes por defecto */
-  /*
-}
- */
-
-.navegador {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
+/* Grid de productos */
 .productos-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin: 20px;
 }
 
 .producto-card {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 15px;
     width: 200px;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #fff;
 }
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.producto-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #231f5e;
+}
+
+.producto-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+
+
 
 
