@@ -64,14 +64,17 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @see UserInterface
      */
+    // src/Entity/Usuario.php
     public function getRoles(): array
-    {
-        $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+     {
+      $roles = $this->roles ?? []; // si tu entidad tiene un campo "roles"
+    
+        // Garantizar que siempre tenga ROLE_USER
+      $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
-    }
+     }
+
 
     /**
      * @param list<string> $roles

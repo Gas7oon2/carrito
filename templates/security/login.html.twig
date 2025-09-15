@@ -1,0 +1,20 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Iniciar sesión</h1>
+
+    {% if error %}
+        <div style="color:red;">Usuario o contraseña incorrecta</div>
+    {% endif %}
+
+    <form action="{{ path('app_login') }}" method="post">
+        <label for="username">Email:</label>
+        <input type="text" id="username" name="_username" value="{{ last_username }}" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="_password" required />
+
+        <button type="submit">Login</button>
+    </form>
+{% endblock %}
