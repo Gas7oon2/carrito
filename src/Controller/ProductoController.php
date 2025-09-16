@@ -2,7 +2,8 @@
 
 namespace App\Controller;
 
-use App\Repository\ProductoRepository;
+
+use App\Manager\ProductoManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,8 +11,11 @@ use App\Entity\Producto;
 use Doctrine\ORM\EntityManagerInterface;
 
 
+
 class ProductoController extends AbstractController
 {
+    private ProductoManager $productoManager;
+
      #[Route('/crearProducto', name: 'crear_producto')]
     public function crearProducto(EntityManagerInterface $entityManager): Response
     {
@@ -34,10 +38,10 @@ class ProductoController extends AbstractController
   
    }
     #[Route('/listarProductos', name: 'listar_productos')]
-    public function listarProductos(ProductoRepository $productoRepository): Response
+    public function listarProductos(ProductoManager $producto_manager): Response
     {
-        // Invocamos el método findAll del repository
-        $productos = $productoRepository->findAll();
+        // Invocamos el método getProductos de ProductoManager
+        $productos = $producto_manager->getProductos();
 
         // Pasamos los productos a la plantilla Twig
         return $this->render('producto/lista.html.twig', [
